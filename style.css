@@ -1,0 +1,174 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfbfd; /* Cinza claríssimo da Apple */
+  color: #1d1d1f;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- NAVEGAÇÃO --- */
+nav {
+  height: 60px;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px); /* Efeito vidro fosco */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #86868b;
+  margin-left: 25px;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0071e3;
+}
+
+/* --- HEADER --- */
+header {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.badge {
+  background: #f5f5f7;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #86868b;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 20px 0;
+}
+
+header p {
+  color: #86868b;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- CONTAINER E CARDS --- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.city-card {
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Moldura da Imagem */
+.image-wrapper {
+  width: 100%;
+  height: 500px;
+  border-radius: 32px; /* Super arredondado */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.city-card:hover .image-wrapper img {
+  transform: scale(1.05); /* Zoom elegante no hover */
+}
+
+/* O Card de Informação com Profundidade */
+.info-card {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 45px;
+  margin-top: -100px; /* Sobe para cima da imagem */
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); /* Sombra difusa e elegante */
+  z-index: 2;
+  text-align: center;
+}
+
+.country {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #bf4800;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.info-card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: -0.01em;
+}
+
+.info-card p {
+  color: #515154;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+/* Botão estilo Apple */
+.btn-apple {
+  display: inline-block;
+  background: #0071e3;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-apple:hover {
+  background: #0077ed;
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 100px 20px;
+  text-align: center;
+  color: #86868b;
+  font-size: 0.8rem;
+}
